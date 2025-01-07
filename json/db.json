@@ -1,0 +1,681 @@
+{
+    "recipes": [
+      {
+        "id": 1,
+        "title": "Chocolate Lava Cake",
+        "description": "Decadent chocolate cake with a gooey molten center",
+        "ingredients": [
+          "200g dark chocolate",
+          "200g butter",
+          "200g powdered sugar",
+          "4 eggs",
+          "2 egg yolks",
+          "1 tsp vanilla extract",
+          "120g all-purpose flour"
+        ],
+        "preparationSteps": [
+          "Preheat oven to 425°F (220°C)",
+          "Melt chocolate and butter together",
+          "Whisk in sugar, eggs, and vanilla",
+          "Fold in flour gently",
+          "Bake in ramekins for 12-14 minutes"
+        ],
+        "tags": [
+          "Dessert",
+          "Chocolate",
+          "Baking"
+        ],
+        "difficulty": "medium",
+        "lastUpdated": "2024-03-20T10:30:00Z"
+      },
+      {
+        "id": 2,
+        "title": "Quinoa Buddha Bowl",
+        "description": "Nutritious and colorful bowl packed with protein and vegetables",
+        "ingredients": [
+          "1 cup quinoa",
+          "1 sweet potato",
+          "2 cups kale",
+          "1 avocado",
+          "1 cup chickpeas",
+          "Tahini dressing"
+        ],
+        "preparationSteps": [
+          "Cook quinoa according to package instructions",
+          "Roast sweet potato cubes",
+          "Massage kale with olive oil",
+          "Arrange all ingredients in bowls",
+          "Drizzle with tahini dressing"
+        ],
+        "tags": [
+          "Vegetarian",
+          "Healthy",
+          "Lunch"
+        ],
+        "difficulty": "easy",
+        "lastUpdated": "2024-03-19T15:45:00Z"
+      },
+      {
+        "id": 3,
+        "title": "Spicy Thai Green Curry",
+        "description": "Authentic Thai curry with coconut milk and fresh vegetables",
+        "ingredients": [
+          "Green curry paste",
+          "400ml coconut milk",
+          "Chicken breast",
+          "Thai eggplants",
+          "Bamboo shoots",
+          "Thai basil",
+          "Fish sauce"
+        ],
+        "preparationSteps": [
+          "Fry curry paste in oil",
+          "Add coconut milk and simmer",
+          "Cook chicken until tender",
+          "Add vegetables",
+          "Season with fish sauce and serve with rice"
+        ],
+        "tags": [
+          "Asian",
+          "Spicy",
+          "Main Course"
+        ],
+        "difficulty": "medium",
+        "lastUpdated": "2024-03-18T09:15:00Z"
+      },
+      {
+        "id": 4,
+        "title": "Classic Margherita Pizza",
+        "description": "Traditional Italian pizza with fresh basil and mozzarella",
+        "ingredients": [
+          "Pizza dough",
+          "San Marzano tomatoes",
+          "Fresh mozzarella",
+          "Fresh basil",
+          "Olive oil",
+          "Salt"
+        ],
+        "preparationSteps": [
+          "Stretch dough into circle",
+          "Spread tomato sauce",
+          "Add torn mozzarella",
+          "Bake at high temperature",
+          "Garnish with fresh basil"
+        ],
+        "tags": [
+          "Italian",
+          "Pizza",
+          "Vegetarian"
+        ],
+        "difficulty": "medium",
+        "lastUpdated": "2024-03-17T14:20:00Z"
+      },
+      {
+        "id": 5,
+        "title": "Salmon Teriyaki",
+        "description": "Glazed salmon fillet with homemade teriyaki sauce",
+        "ingredients": [
+          "Salmon fillet",
+          "Soy sauce",
+          "Mirin",
+          "Sake",
+          "Brown sugar",
+          "Ginger"
+        ],
+        "preparationSteps": [
+          "Make teriyaki sauce",
+          "Marinate salmon",
+          "Pan-sear skin side down",
+          "Flip and baste with sauce",
+          "Serve with steamed rice"
+        ],
+        "tags": [
+          "Japanese",
+          "Seafood",
+          "Healthy"
+        ],
+        "difficulty": "easy",
+        "lastUpdated": "2024-03-16T11:30:00Z"
+      },
+      {
+        "id": 6,
+        "title": "Mushroom Risotto",
+        "description": "Creamy Italian rice dish with wild mushrooms",
+        "ingredients": [
+          "Arborio rice",
+          "Mixed mushrooms",
+          "White wine",
+          "Vegetable stock",
+          "Parmesan cheese",
+          "Butter"
+        ],
+        "preparationSteps": [
+          "Sauté mushrooms",
+          "Toast rice with wine",
+          "Gradually add stock",
+          "Stir until creamy",
+          "Finish with parmesan"
+        ],
+        "tags": [
+          "Italian",
+          "Vegetarian",
+          "Main Course"
+        ],
+        "difficulty": "hard",
+        "lastUpdated": "2024-03-15T16:45:00Z"
+      },
+      {
+        "id": 7,
+        "title": "Greek Salad",
+        "description": "Fresh Mediterranean salad with feta cheese",
+        "ingredients": [
+          "Cucumber",
+          "Tomatoes",
+          "Red onion",
+          "Feta cheese",
+          "Kalamata olives",
+          "Olive oil"
+        ],
+        "preparationSteps": [
+          "Chop vegetables",
+          "Cube feta cheese",
+          "Mix ingredients",
+          "Dress with olive oil",
+          "Season with oregano"
+        ],
+        "tags": [
+          "Greek",
+          "Salad",
+          "Vegetarian"
+        ],
+        "difficulty": "easy",
+        "lastUpdated": "2024-03-14T12:00:00Z"
+      },
+      {
+        "id": 8,
+        "title": "Beef Stroganoff",
+        "description": "Classic Russian dish with tender beef and mushroom sauce",
+        "ingredients": [
+          "Beef strips",
+          "Mushrooms",
+          "Sour cream",
+          "Onion",
+          "Beef stock",
+          "Egg noodles"
+        ],
+        "preparationSteps": [
+          "Sear beef strips",
+          "Sauté mushrooms and onions",
+          "Make cream sauce",
+          "Cook noodles",
+          "Combine all ingredients"
+        ],
+        "tags": [
+          "Russian",
+          "Beef",
+          "Comfort Food"
+        ],
+        "difficulty": "medium",
+        "lastUpdated": "2024-03-13T13:15:00Z"
+      },
+      {
+        "id": 9,
+        "title": "Vegan Chickpea Curry",
+        "description": "Hearty plant-based curry with aromatic spices",
+        "ingredients": [
+          "Chickpeas",
+          "Coconut milk",
+          "Tomatoes",
+          "Spinach",
+          "Curry powder",
+          "Garlic"
+        ],
+        "preparationSteps": [
+          "Sauté aromatics",
+          "Add spices and tomatoes",
+          "Simmer with coconut milk",
+          "Add chickpeas",
+          "Wilt spinach"
+        ],
+        "tags": [
+          "Vegan",
+          "Indian",
+          "Healthy"
+        ],
+        "difficulty": "easy",
+        "lastUpdated": "2024-03-12T10:30:00Z"
+      },
+      {
+        "id": 10,
+        "title": "Apple Pie",
+        "description": "Classic American dessert with flaky crust",
+        "ingredients": [
+          "Pie crust",
+          "Apples",
+          "Cinnamon",
+          "Sugar",
+          "Butter",
+          "Lemon juice"
+        ],
+        "preparationSteps": [
+          "Prepare pie crust",
+          "Slice and season apples",
+          "Fill pie crust",
+          "Add top crust",
+          "Bake until golden"
+        ],
+        "tags": [
+          "Dessert",
+          "American",
+          "Baking"
+        ],
+        "difficulty": "medium",
+        "lastUpdated": "2024-03-11T15:20:00Z"
+      },
+      {
+        "id": 11,
+        "title": "Pad Thai",
+        "description": "Traditional Thai stir-fried rice noodles",
+        "ingredients": [
+          "Rice noodles",
+          "Tofu",
+          "Bean sprouts",
+          "Peanuts",
+          "Tamarind paste",
+          "Fish sauce"
+        ],
+        "preparationSteps": [
+          "Soak noodles",
+          "Make sauce",
+          "Stir-fry ingredients",
+          "Add noodles",
+          "Garnish and serve"
+        ],
+        "tags": [
+          "Thai",
+          "Noodles",
+          "Street Food"
+        ],
+        "difficulty": "hard",
+        "lastUpdated": "2024-03-10T17:45:00Z"
+      },
+      {
+        "id": 12,
+        "title": "French Onion Soup",
+        "description": "Rich beef broth with caramelized onions and cheese",
+        "ingredients": [
+          "Onions",
+          "Beef stock",
+          "Baguette",
+          "Gruyere cheese",
+          "Butter",
+          "White wine"
+        ],
+        "preparationSteps": [
+          "Caramelize onions",
+          "Add wine and stock",
+          "Simmer soup",
+          "Add bread and cheese",
+          "Broil until golden"
+        ],
+        "tags": [
+          "French",
+          "Soup",
+          "Comfort Food"
+        ],
+        "difficulty": "medium",
+        "lastUpdated": "2024-03-09T14:30:00Z"
+      },
+      {
+        "id": 13,
+        "title": "Sushi Roll",
+        "description": "California roll with fresh ingredients",
+        "ingredients": [
+          "Sushi rice",
+          "Nori",
+          "Crab meat",
+          "Cucumber",
+          "Avocado",
+          "Sesame seeds"
+        ],
+        "preparationSteps": [
+          "Prepare sushi rice",
+          "Layer nori and rice",
+          "Add fillings",
+          "Roll tightly",
+          "Slice and serve"
+        ],
+        "tags": [
+          "Japanese",
+          "Seafood",
+          "Appetizer"
+        ],
+        "difficulty": "hard",
+        "lastUpdated": "2024-03-08T11:15:00Z"
+      },
+      {
+        "id": 14,
+        "title": "Chicken Fajitas",
+        "description": "Sizzling Mexican dish with peppers and onions",
+        "ingredients": [
+          "Chicken breast",
+          "Bell peppers",
+          "Onions",
+          "Tortillas",
+          "Lime",
+          "Fajita seasoning"
+        ],
+        "preparationSteps": [
+          "Marinate chicken",
+          "Slice vegetables",
+          "Cook chicken",
+          "Sauté vegetables",
+          "Serve with tortillas"
+        ],
+        "tags": [
+          "Mexican",
+          "Chicken",
+          "Quick Meal"
+        ],
+        "difficulty": "easy",
+        "lastUpdated": "2024-03-07T16:00:00Z"
+      },
+      {
+        "id": 15,
+        "title": "Tiramisu", 
+        "description": "Classic Italian coffee-flavored dessert",
+        "ingredients": [
+          "Ladyfingers",
+          "Mascarpone",
+          "Coffee",
+          "Eggs",
+          "Sugar",
+          "Cocoa powder"
+        ],
+        "preparationSteps": [
+          "Make coffee mixture",
+          "Prepare cream filling",
+          "Dip ladyfingers",
+          "Layer ingredients",
+          "Chill and serve"
+        ],
+        "tags": [
+          "Italian",
+          "Dessert",
+          "No-Bake"
+        ],
+        "difficulty": "medium",
+        "lastUpdated": "2024-03-06T13:45:00Z"
+      },
+      {
+        "id": 16,
+        "title": "Vegetable Lasagna",
+        "description": "Layered pasta dish with seasonal vegetables",
+        "ingredients": [
+          "Lasagna noodles",
+          "Mixed vegetables",
+          "Ricotta cheese",
+          "Tomato sauce",
+          "Mozzarella",
+          "Herbs"
+        ],
+        "preparationSteps": [
+          "Prepare vegetables",
+          "Make cheese mixture",
+          "Layer ingredients",
+          "Bake until bubbly",
+          "Rest before serving"
+        ],
+        "tags": [
+          "Italian",
+          "Vegetarian",
+          "Pasta"
+        ],
+        "difficulty": "medium",
+        "lastUpdated": "2024-03-05T12:30:00Z"
+      },
+      {
+        "id": 17,
+        "title": "Beef Tacos",
+        "description": "Authentic Mexican street tacos",
+        "ingredients": [
+          "Ground beef",
+          "Corn tortillas",
+          "Onion",
+          "Cilantro",
+          "Lime",
+          "Taco seasoning"
+        ],
+        "preparationSteps": [
+          "Cook seasoned beef",
+          "Warm tortillas",
+          "Chop toppings",
+          "Assemble tacos",
+          "Serve with lime"
+        ],
+        "tags": [
+          "Mexican",
+          "Beef",
+          "Street Food"
+        ],
+        "difficulty": "easy",
+        "lastUpdated": "2024-03-04T18:20:00Z"
+      },
+      {
+        "id": 18,
+        "title": "Pesto Pasta",
+        "description": "Fresh basil pesto with pasta",
+        "ingredients": [
+          "Basil leaves",
+          "Pine nuts",
+          "Parmesan",
+          "Garlic",
+          "Olive oil",
+          "Pasta"
+        ],
+        "preparationSteps": [
+          "Make fresh pesto",
+          "Cook pasta",
+          "Combine ingredients",
+          "Add pasta water",
+          "Garnish and serve"
+        ],
+        "tags": [
+          "Italian",
+          "Pasta",
+          "Quick Meal"
+        ],
+        "difficulty": "easy",
+        "lastUpdated": "2024-03-03T15:10:00Z"
+      },
+      {
+        "id": 19,
+        "title": "Miso Soup",
+        "description": "Traditional Japanese soup with tofu",
+        "ingredients": [
+          "Dashi stock",
+          "Miso paste",
+          "Tofu",
+          "Seaweed",
+          "Green onions",
+          "Mushrooms"
+        ],
+        "preparationSteps": [
+          "Prepare dashi",
+          "Dissolve miso",
+          "Add tofu",
+          "Simmer gently",
+          "Garnish and serve"
+        ],
+        "tags": [
+          "Japanese",
+          "Soup",
+          "Healthy"
+        ],
+        "difficulty": "easy",
+        "lastUpdated": "2024-03-02T09:45:00Z"
+      },
+      {
+        "id": 20,
+        "title": "Beef Wellington",
+        "description": "Elegant beef tenderloin wrapped in pastry",
+        "ingredients": [
+          "Beef tenderloin",
+          "Puff pastry",
+          "Mushroom duxelles",
+          "Prosciutto",
+          "Egg wash",
+          "Herbs"
+        ],
+        "preparationSteps": [
+          "Sear beef",
+          "Prepare mushrooms",
+          "Wrap in pastry",
+          "Brush with egg",
+          "Bake until golden"
+        ],
+        "tags": [
+          "British",
+          "Beef",
+          "Special Occasion"
+        ],
+        "difficulty": "hard",
+        "lastUpdated": "2024-03-01T20:00:00Z"
+      },
+      {
+        "id": 21,
+        "title": "Shakshuka",
+        "description": "Eggs poached in spicy tomato sauce",
+        "ingredients": [
+          "Eggs",
+          "Tomatoes",
+          "Bell peppers",
+          "Onions",
+          "Cumin",
+          "Paprika"
+        ],
+        "preparationSteps": [
+          "Make tomato sauce",
+          "Add spices",
+          "Create wells",
+          "Poach eggs",
+          "Garnish and serve"
+        ],
+        "tags": [
+          "Middle Eastern",
+          "Breakfast",
+          "Vegetarian"
+        ],
+        "difficulty": "medium",
+        "lastUpdated": "2024-02-29T08:30:00Z"
+      },
+      {
+        "id": 22,
+        "title": "Chicken Noodle Soup",
+        "description": "Comforting homemade soup with vegetables",
+        "ingredients": [
+          "Chicken",
+          "Egg noodles",
+          "Carrots",
+          "Celery",
+          "Onion",
+          "Chicken broth"
+        ],
+        "preparationSteps": [
+          "Make chicken broth",
+          "Cook vegetables",
+          "Add noodles",
+          "Shred chicken",
+          "Season and serve"
+        ],
+        "tags": [
+          "Soup",
+          "Comfort Food",
+          "American"
+        ],
+        "difficulty": "easy",
+        "lastUpdated": "2024-02-28T14:15:00Z"
+      },
+      {
+        "id": 23,
+        "title": "Ratatouille",
+        "description": "French Provençal stewed vegetables",
+        "ingredients": [
+          "Eggplant",
+          "Zucchini",
+          "Tomatoes",
+          "Bell peppers",
+          "Onions",
+          "Herbs de Provence"
+        ],
+        "preparationSteps": [
+          "Slice vegetables",
+          "Layer in pattern",
+          "Add herbs",
+          "Bake slowly",
+          "Rest before serving"
+        ],
+        "tags": [
+          "French",
+          "Vegetarian",
+          "Healthy"
+        ],
+        "difficulty": "medium",
+        "lastUpdated": "2024-02-27T11:00:00Z"
+      },
+      {
+        "id": 24,
+        "title": "Beef Pho",
+        "description": "Vietnamese noodle soup with herbs",
+        "ingredients": [
+          "Rice noodles",
+          "Beef slices",
+          "Bean sprouts",
+          "Thai basil",
+          "Star anise",
+          "Fish sauce"
+        ],
+        "preparationSteps": [
+          "Make beef broth",
+          "Cook noodles",
+          "Slice beef thin",
+          "Assemble bowl",
+          "Add garnishes"
+        ],
+        "tags": [
+          "Vietnamese",
+          "Soup",
+          "Asian"
+        ],
+        "difficulty": "hard",
+        "lastUpdated": "2024-02-26T16:40:00Z"
+      },
+      {
+        "id": 25,
+        "title": "Lemon Cheesecake",
+        "description": "Creamy cheesecake with citrus flavor",
+        "ingredients": [
+          "Cream cheese",
+          "Graham crackers",
+          "Lemons",
+          "Sugar",
+          "Eggs",
+          "Butter"
+        ],
+        "preparationSteps": [
+          "Make crust",
+          "Prepare filling",
+          "Bake in water bath",
+          "Cool slowly",
+          "Chill overnight"
+        ],
+        "tags": [
+          "Dessert",
+          "Baking",
+          "American"
+        ],
+        "difficulty": "medium",
+        "lastUpdated": "2024-02-25T13:25:00Z"
+      }
+    ]
+  }
