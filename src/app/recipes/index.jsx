@@ -1,27 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link, useSearchParams, useNavigate } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useDebounce } from "use-debounce";
 import useFetch from "../../hooks/useFetch";
-import {
-  TextField,
-  Select,
-  MenuItem,
-  FormControl,
-  InputLabel,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-  Card,
-  CardContent,
-  Typography,
-  Grid,
-  Box,
-  IconButton,
-} from "@mui/material";
-import { FiEdit, FiTrash2, FiPlus } from "react-icons/fi";
+import { FiPlus } from "react-icons/fi";
+import SearchAndFilters from "./components/SearchAndFilters";
+import RecipeCard from "./components/RecipeCard";
+import EditRecipeDialog from "./components/EditRecipeDialog";
 
 export const AVAILABLE_TAGS = [
   "Breakfast",
@@ -157,294 +142,59 @@ const Recipes = () => {
 
   if (loading)
     return (
-      <Box textAlign="center" py={10}>
+      <div className="flex justify-center items-center h-screen">
         Loading...
-      </Box>
+      </div>
     );
   if (error)
     return (
-      <Box textAlign="center" py={10} color="error.main">
+      <div className="flex justify-center items-center h-screen text-red-500">
         Error: {error}
-      </Box>
+      </div>
     );
 
   return (
-    <Box sx={{ maxWidth: 1200, mx: "auto", p: 3 }}>
-      <Box
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        mb={4}
-      >
-        <Typography variant="h4" component="h1">
-          Recipes
-        </Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          startIcon={<FiPlus />}
+    <div className="max-w-7xl mx-auto p-6">
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-bold">Recipes</h1>
+        <button
           onClick={() => navigate("/recipes/create")}
+          className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
         >
-          Create Recipe
-        </Button>
-      </Box>
+          <FiPlus /> Create Recipe
+        </button>
+      </div>
 
-      <Grid container spacing={2} mb={4}>
-        <Grid item xs={12} md={3}>
-          <TextField
-            fullWidth
-            label="Search recipes"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <FormControl fullWidth>
-            <InputLabel>Difficulty</InputLabel>
-            <Select
-              value={filterDifficulty}
-              label="Difficulty"
-              onChange={(e) => setFilterDifficulty(e.target.value)}
-            >
-              <MenuItem value="all">All Difficulties</MenuItem>
-              <MenuItem value="easy">Easy</MenuItem>
-              <MenuItem value="medium">Medium</MenuItem>
-              <MenuItem value="hard">Hard</MenuItem>
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <FormControl fullWidth>
-            <InputLabel>Filter by Tag</InputLabel>
-            <Select
-              value={filterTag}
-              label="Filter by Tag"
-              onChange={(e) => setFilterTag(e.target.value)}
-            >
-              <MenuItem value="all">All Tags</MenuItem>
-              {AVAILABLE_TAGS.map((tag) => (
-                <MenuItem key={tag} value={tag}>
-                  {tag.charAt(0).toUpperCase() + tag.slice(1)}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs={12} md={3}>
-          <FormControl fullWidth>
-            <InputLabel>Sort By</InputLabel>
-            <Select
-              value={sortBy}
-              label="Sort By"
-              onChange={(e) => setSortBy(e.target.value)}
-            >
-              <MenuItem value="newest">Newest First</MenuItem>
-              <MenuItem value="oldest">Oldest First</MenuItem>
-              <MenuItem value="title">Title</MenuItem>
-              <MenuItem value="difficulty">Difficulty</MenuItem>
-            </Select>
-          </FormControl>
-        </Grid>
-      </Grid>
+      <SearchAndFilters
+        searchTerm={searchTerm}
+        filterDifficulty={filterDifficulty}
+        filterTag={filterTag}
+        sortBy={sortBy}
+        setSearchTerm={setSearchTerm}
+        setFilterDifficulty={setFilterDifficulty}
+        setFilterTag={setFilterTag}
+        setSortBy={setSortBy}
+        AVAILABLE_TAGS={AVAILABLE_TAGS}
+      />
 
-      <Grid container spacing={3}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredAndSortedRecipes.map((recipe) => (
-          <Grid item xs={12} sm={6} md={4} key={recipe.id}>
-            <Card>
-              <CardContent>
-                <Box
-                  display="flex"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  mb={2}
-                >
-                  <Typography variant="h6" component="h2">
-                    {recipe.title}
-                  </Typography>
-                  <Box>
-                    <IconButton
-                      onClick={() => setEditingRecipe(recipe)}
-                      size="small"
-                    >
-                      <FiEdit size={18} />
-                    </IconButton>
-                    <IconButton
-                      onClick={() => handleDelete(recipe.id)}
-                      size="small"
-                      color="error"
-                    >
-                      <FiTrash2 size={18} />
-                    </IconButton>
-                  </Box>
-                </Box>
-                <Typography color="text.secondary" paragraph>
-                  {recipe.description}
-                </Typography>
-                <Box
-                  display="flex"
-                  justifyContent="space-between"
-                  alignItems="center"
-                >
-                  <Typography
-                    variant="caption"
-                    sx={{
-                      px: 1,
-                      py: 0.5,
-                      borderRadius: 1,
-                      bgcolor:
-                        recipe.difficulty.toLowerCase() === "easy"
-                          ? "success.light"
-                          : recipe.difficulty.toLowerCase() === "medium"
-                          ? "warning.light"
-                          : "error.light",
-                    }}
-                  >
-                    {recipe.difficulty.toUpperCase()}
-                  </Typography>
-                  <Box display="flex" gap={0.5}>
-                    {recipe.tags.slice(0, 2).map((tag) => (
-                      <Typography
-                        key={tag}
-                        variant="caption"
-                        sx={{
-                          px: 1,
-                          py: 0.5,
-                          borderRadius: 1,
-                          bgcolor: "primary.light",
-                          color: "primary.contrastText",
-                        }}
-                      >
-                        {tag}
-                      </Typography>
-                    ))}
-                    {recipe.tags.length > 2 && (
-                      <Typography
-                        variant="caption"
-                        sx={{ color: "text.secondary" }}
-                      >
-                        +{recipe.tags.length - 2}
-                      </Typography>
-                    )}
-                  </Box>
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
+          <RecipeCard
+            key={recipe.id}
+            recipe={recipe}
+            onEdit={setEditingRecipe}
+            onDelete={handleDelete}
+          />
         ))}
-      </Grid>
+      </div>
 
-      <Dialog
-        open={!!editingRecipe}
-        onClose={() => setEditingRecipe(null)}
-        maxWidth="md"
-        fullWidth
-      >
-        <DialogTitle>Edit Recipe</DialogTitle>
-        <DialogContent dividers>
-          {editingRecipe && (
-            <Grid container spacing={2}>
-              <Grid item xs={12}>
-                <TextField
-                  fullWidth
-                  label="Title"
-                  value={editingRecipe.title}
-                  onChange={(e) =>
-                    setEditingRecipe({
-                      ...editingRecipe,
-                      title: e.target.value,
-                    })
-                  }
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  fullWidth
-                  multiline
-                  rows={3}
-                  label="Description"
-                  value={editingRecipe.description}
-                  onChange={(e) =>
-                    setEditingRecipe({
-                      ...editingRecipe,
-                      description: e.target.value,
-                    })
-                  }
-                />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <FormControl fullWidth>
-                  <InputLabel>Difficulty</InputLabel>
-                  <Select
-                    value={editingRecipe.difficulty}
-                    label="Difficulty"
-                    onChange={(e) =>
-                      setEditingRecipe({
-                        ...editingRecipe,
-                        difficulty: e.target.value,
-                      })
-                    }
-                  >
-                    <MenuItem value="easy">Easy</MenuItem>
-                    <MenuItem value="medium">Medium</MenuItem>
-                    <MenuItem value="hard">Hard</MenuItem>
-                  </Select>
-                </FormControl>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <FormControl fullWidth>
-                  <InputLabel>Tags</InputLabel>
-                  <Select
-                    multiple
-                    value={editingRecipe.tags}
-                    label="Tags"
-                    onChange={(e) =>
-                      setEditingRecipe({
-                        ...editingRecipe,
-                        tags: e.target.value,
-                      })
-                    }
-                    renderValue={(selected) => (
-                      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
-                        {selected.map((value) => (
-                          <Typography
-                            key={value}
-                            variant="caption"
-                            sx={{
-                              px: 1,
-                              py: 0.5,
-                              borderRadius: 1,
-                              bgcolor: "primary.light",
-                              color: "primary.contrastText",
-                            }}
-                          >
-                            {value}
-                          </Typography>
-                        ))}
-                      </Box>
-                    )}
-                  >
-                    {AVAILABLE_TAGS.map((tag) => (
-                      <MenuItem key={tag} value={tag}>
-                        {tag.charAt(0).toUpperCase() + tag.slice(1)}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </Grid>
-            </Grid>
-          )}
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setEditingRecipe(null)}>Cancel</Button>
-          <Button
-            onClick={() => handleUpdate(editingRecipe)}
-            variant="contained"
-          >
-            Save Changes
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </Box>
+      <EditRecipeDialog
+        editingRecipe={editingRecipe}
+        setEditingRecipe={setEditingRecipe}
+        onUpdate={handleUpdate}
+        AVAILABLE_TAGS={AVAILABLE_TAGS}
+      />
+    </div>
   );
 };
 
